@@ -1,4 +1,5 @@
-## PASTA (adaPtive mAterials Science meTa-dAta) ELN
+## PASTA ELN
+PASTA-ELN: adaPtive mAterials Science meTadAta
 ### Table of contents
 - Installation instructions
   - [Linux/Ubuntu](installLinux)
