@@ -15,7 +15,7 @@
 ### Concepts of PASTA electronic lab notebook (ELN)
 Pasta-dishes are a mixture pasta and sauce, the latter adds flavors and richness to the otherwise boring pasta. This ELN combines raw-data with rich metadata to allow advanced data science. In the database, one can fully adapt and improvise the metadata definitions to generate something novel. PASTA uses a local-first approach: store all data and metadata locally (always accessible to user) and synchronize with a server upon user request.
 
-Extractors are little python scripts that 'extract' metadata, thumbnails and user-metadata from the raw measurement files. These little programs can be written/adopted by scientists and can be shared. [To read more.... (for advanced users)](extractors)
+Extractors are little python scripts that 'extract' metadata, thumbnails and user-metadata from the raw measurement files. These little programs can be written/adopted by scientists and can be shared. [To read more.... (for advanced users)](extractors.md)
 
 In PASTA, the meta-data is stored in a document database called **CouchDB**. This non-SQL database is very adaptive to the different raw data sources and corresponding different meta-data. [Read more on this CouchDB implementation...(for developers of PASTA)](couchDB)
 
