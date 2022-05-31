@@ -1,4 +1,4 @@
-## PASTA ELN
+## PASTA-ELN
 ### Table of contents
 - Installation instructions
   - [Linux/Ubuntu](installLinux.md)
@@ -44,7 +44,7 @@ The development of the software started shortly before the Corona-pandemic hit G
   - storage for large amounts of raw data: giga-, terra- and peta-bytes. PASTA can link, extract data from that storage
   - conceptional and legal data management database. "Data management plan (DMP)" exists as RDMO on GitHub. PASTA is planned to link to that database
 - *How is privacy (german Datenschutz) accounted for?*
-  The lead designer of PASTA ELNe (as well as many of his immediate colleagues) demand privacy when they use software. PASTA was designed to support privacy on multiple levels.
+  The lead designer of PASTA-ELN (as well as many of his immediate colleagues) demand privacy when they use software. PASTA was designed to support privacy on multiple levels.
   - Initially all data and metadata are collected only on the desktop/laptop of the researcher. No data is collected in a central location. Only if the researcher whishes to share the data, it will be uploaded to the database of the research group.
   - Complete decoupling of authorization and authorship (Only, members of a research group are allowed to write to the database (authorization). Who writes each entry can be recorded or not (authorship).)
   - Everybody can select if she/he wants to be identified as author in the database of the research group. If the scientist does not want to be identified, he becomes anonymous (We use a _ for that.) Even another user, or the system administrator cannot identify the author of a entry because that information is not stored.

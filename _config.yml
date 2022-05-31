@@ -1,4 +1,6 @@
 ---
-title: PASTA-ELN | The favorite ELN for experimental scientists
+title: PASTA | The favorite ELN for experimental scientists
 theme: jekyll-theme-slate
+header_pages:
+  - README.md
 ---
