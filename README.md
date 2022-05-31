@@ -17,17 +17,17 @@ Pasta-dishes are a mixture pasta and sauce, the latter adds flavors and richness
 
 Extractors are little python scripts that 'extract' metadata, thumbnails and user-metadata from the raw measurement files. These little programs can be written/adopted by scientists and can be shared. [To read more.... (for advanced users)](extractors.md)
 
-In PASTA, the meta-data is stored in a document database called **CouchDB**. This non-SQL database is very adaptive to the different raw data sources and corresponding different meta-data. [Read more on this CouchDB implementation...(for developers of PASTA)](couchDB)
+In PASTA, the meta-data is stored in a document database called **CouchDB**. This non-SQL database is very adaptive to the different raw data sources and corresponding different meta-data. [Read more on this CouchDB implementation...(for developers of PASTA)](couchDB.md)
 
-Adaptive software development (scrum) has revolutionized software projects. We believe that **agile project planning** is also highly beneficial for scientific research projects. [To read more... (for all useres)](agileProjects)
+Adaptive software development (scrum) has revolutionized software projects. We believe that **agile project planning** is also highly beneficial for scientific research projects. [To read more... (for all useres)](agileProjects.md)
 
-The raw data is the origin of scientific work and has to follow the FAIR principles to be trusted. PASTA uses **DataLad** for the raw data and simplifies it to the typical use of experimental material scientists. [To read more on the use of dataLad...(for developers)](DataLad)
+The raw data is the origin of scientific work and has to follow the FAIR principles to be trusted. PASTA uses **DataLad** for the raw data and simplifies it to the typical use of experimental material scientists. [To read more on the use of dataLad...(for developers)](DataLad.md)
 
-If CouchDB and DataLad are the two legs on which PASTA is built (and agile project planning is its heart), then the **python backend** is its torso, which links everything together. [Read more on the backend...](software)
+If CouchDB and DataLad are the two legs on which PASTA is built (and agile project planning is its heart), then the **python backend** is its torso, which links everything together. [Read more on the backend...](software.md)
 
-All users will interact with the python backend via **graphical user interfaces (GUI)** that use JavaScript and the **React** framework for responsive work. [Read more on the GUI and React implementation...](software)
+All users will interact with the python backend via **graphical user interfaces (GUI)** that use JavaScript and the **React** framework for responsive work. [Read more on the GUI and React implementation...](software.md)
 
-The development of the software started shortly before the Corona-pandemic hit Germany in 2020. The current state is given in [features](features)
+The development of the software started shortly before the Corona-pandemic hit Germany in 2020. The current state is given in [features](features.md)
 
 * * *
 
@@ -37,7 +37,7 @@ The development of the software started shortly before the Corona-pandemic hit G
   - Data has two origins
     - local harddrive where data can be dumped into (freedom to research)
     - links to stored data in a repository
-  - follow (agile project management)[agileProjects], which is used in IT-projects
+  - follow [agile project management](agileProjects.md), which is used in IT-projects
   -   PASTA is similar to Labfolder(TM), SciNote(TM), etc. only that it is open-source, has two data-sources, etc.
 - *What do you not want to do?*
   - persistent database of published data. "Dataverse" exists for that goal and does a fabulous job. PASTA is planned to upload to those databases
@@ -83,7 +83,7 @@ The development of the software started shortly before the Corona-pandemic hit G
   We are aware of different run-times in different operating system. A backend test has different execution times on Windows (Thinkpad E495: 57.9sec), macOS (Macbook Air 2020: 20.8sec) and Linux (Thinkpad E495: 14.8sec). The graphical user interface seems to work similarly fast on all operating systems. We will investigate how to speed up the backend for Windows users in the future.
 
 - *Why dont' you package everything in a flatpak or snap?*
-  Containerization is a great concept for many software as it separates the host operating system from the software. This concept is not for PASTA-ELN because we require and want to extend extractors [See ...](extractors). As such the user/scientist should be able to change code and require libraries that are not included by default. These libraries cannot be added to the container. Scientist developed extractors cannot be archived in a container which should be self-sufficient and encapsulated. (Also, one could think of creating detours via system-calls / demons on the host system. However, flatpak and snap severely restrict host system-calls and cannot interact with processes on the host system.)
+  Containerization is a great concept for many software as it separates the host operating system from the software. This concept is not for PASTA-ELN because we require and want to extend extractors [See ...](extractors.md). As such the user/scientist should be able to change code and require libraries that are not included by default. These libraries cannot be added to the container. Scientist developed extractors cannot be archived in a container which should be self-sufficient and encapsulated. (Also, one could think of creating detours via system-calls / demons on the host system. However, flatpak and snap severely restrict host system-calls and cannot interact with processes on the host system.)
 
 * * *
 
