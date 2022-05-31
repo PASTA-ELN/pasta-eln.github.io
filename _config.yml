@@ -1,6 +1,6 @@
 ---
 title: PASTA | The favorite ELN for experimental scientists
-theme: jekyll-theme-slate
+theme: jekyll-theme-minimal
 header_pages:
   - README.md
 ---
