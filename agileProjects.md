@@ -1,9 +1,9 @@
-# Agile Project Planning
+## Agile Project Planning
 
-## Motivation
+### Motivation
 One of the inspirations for PASTA was the agile project management for IT-projects [https://en.wikipedia.org/wiki/Scrum_(software_development)]. We believe that **agile project planning** is also highly beneficial for scientific research projects. Here, we briefly talk about how PASTA-ELN can be used for agile project planning.
 
-## Structure of projects
+### Structure of projects
 PASTA uses a hierarchy in its datastructure and on the hard disk which is inspired by SCRUM:
 1. projects have
   - a name: e.g. Peter_Tribology
@@ -30,7 +30,7 @@ This could result in a project directory that looks like:
 - TALK
 
 
-## Meetings
+### Meetings
 If you subscribe to the SCRUM-framework, you can use the comment of the task/subtask as an area to store your meeting notes. An advanced editor allows you to add structure to the notes
 
 According to SCRUM, meetings
@@ -42,17 +42,17 @@ According to SCRUM, meetings
 - identify easy and difficult tasks: pushed forward, backward
 - "Tasks" list of to-dos
 
-## Details
-### Projects
+### Details
+#### Projects
 - includes the objective of the project
 - with tags (e.g. #FEM #EBSD)
 - have a state: active, passive, paused, ended
 
-### Steps, Tasks
+#### Steps, Tasks
 - arbitrary names
 - can use operating procedures, samples, ...
 
-### Software projects that are stored in PASTA
+#### Software projects that are stored in PASTA
 this project is a software project that is stored in PASTA
 - step/task text has progress report and future features
 - documentation can be a part of the hierarchy. It can be a task to produce "Documentation" that can be uploaded to a separate repository as [git-submodule](http://git-scm.com/book/en/v2/Git-Tools-Submodules)

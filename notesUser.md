@@ -1,17 +1,17 @@
-# Notes for Users
+## Notes for Users
 If you are an experienced user and want to change the ontology/questions, etc. read this document.
 
-## Ontology
+### Ontology
 Ontology describes the types of document you want to store (called docTypes) and their properties. A docType of "sample" might have a property "name". The ontology is designed to be completely flexible with only rules on naming. Read the default doctypes and their properties to get a picture.
 
-### Rules for document types
+#### Rules for document types
 - docType is the "sample", "instrument", ... Doctypes are lowercase; cannot start with 'x','_', numbers, no spaces.
 - different properties of a doctype can be separated with a heading to add structure.
   - Example of doctype: Sample
     - Heading "Geometry" with properties height, width, length
     - Heading "Identifiers" with properties name, qr-code
 
-##### Special document types
+###### Special document types
 - "x0", "x1", "x2", ... is the names of the folder/directorys on the hard-disk. Every other doctype should belong to (at least) one project=x0.
 - "measurement" corresponds to a file on the disk. When scanning for new files, "measurement" is the default doctype. Other docTypes can have also connected files.
 
@@ -28,7 +28,7 @@ Ontology describes the types of document you want to store (called docTypes) and
     - link to other/previous samples is possible
 
 
-### Rules for properties
+#### Rules for properties
 1. name: alpha-numeric, no spaces
   - forbidden names: branch, type, user, client
 2. query: long description including spaces
@@ -43,7 +43,7 @@ Ontology describes the types of document you want to store (called docTypes) and
    - if present: entered value is a number (not enforced yet)
    - if omitted: entered value is a text
 
-#### Special properties
+##### Special properties
 - Don't add 'project' etc. as property as it is added automatically (during the creation of the forms and then processed into branch.)
 - "comment" is a remark which has additional functions. If you enter "#tag" in it or ":length:2:", these are
   automatically processed. If not present, a comment will be added to all doctypes.

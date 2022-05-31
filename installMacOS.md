@@ -1,4 +1,6 @@
 ## Important
+OUTDATED
+
 
 macOS can be a bit difficult with python, if you don't have any experience with python environments on Mac use the included version 3.8 that comes with your Mac.
 If PASTA is not working with your install or you have installed a newer version of Python and got stuck visit the macOS section on the [troubleshooting page](troubleshooting#macos-problems).

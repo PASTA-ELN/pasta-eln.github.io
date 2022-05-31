@@ -1,4 +1,6 @@
 # Installation instructions Linux/Ubuntu
+OUTDATED
+
 ## Installation script
 For Windows, there is a installation script in the main folder; We suggest to download that and use it.
 - download [install.bat](https://jugit.fz-juelich.de/pasta/main/-/blob/master/install.bat)

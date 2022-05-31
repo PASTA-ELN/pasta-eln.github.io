@@ -1,9 +1,9 @@
-# CouchDB information
+## CouchDB information
 Here we discuss design concepts of the chosen database and why we choose the CouchDB implementation
 
 
-## FAQs
-### Why choose a NoSQL database and not a SQL database
+### FAQs
+#### Why choose a NoSQL database and not a SQL database
 - NoSQL databases (CouchDB, MongoDB)
   + are good for unstructured data. As such any document/information can be added. This is very beneficial in scientific environments and ELNs in particular since the structure is not fixed.
   + are a little slower when creating tables. This drawback is not so relevant for ELNs. However, if you are a bank with millions of customers, you want to scan that database fast.
@@ -11,29 +11,29 @@ Here we discuss design concepts of the chosen database and why we choose the Cou
   + are good for structured data and metadata. Bank customers all have a name, address, portfolio value, ...
   + Could be appropriate for a lab-assistant structure in which 10 technicians create data according to fixed protocols and a single person digests it.
 
-### Why did we choose CouchDB and not MongoDB?
+#### Why did we choose CouchDB and not MongoDB?
 - The REST-API for CouchDB exists and that feature allows fast development of HTML pages, mobile access....
 - The REST-API for MongoDB has to be written using a nodeJS server and should follow the same protocol as the REST-API for CouchDB.
 Once the version of CouchDB is operational, the MongoDB API can be written and one could switch to MongoDB, which might have advantages in the future.
 
-### How is hierarchical information stored
+#### How is hierarchical information stored
 One part of PASTA is the hierarchical information: a project is the "parent" of everything, task is a "child", a subtask is a "grandchild" in computer language. There are two possibilities to create this structure in a flat database:
-#### Case 1 - upward linking: "I am the child of ..."
+##### Case 1 - upward linking: "I am the child of ..."
   - The difficulty in this setup is that one needs to account for the order of child.
   - Hence two fields are required: ancestors tree (or only parent) and child-number ["I am the 3rd child"]
   - This approach is used in PASTA: "stack" has the id-numbers of the ancestors and childNum is count
-#### Case 2 - downward linking: "I have these children [list of children]"
+##### Case 2 - downward linking: "I have these children [list of children]"
   - Advantage: only order of children required and these are only stored once.
   - Disadvantage: adding one child requires that the parent is changed: it has a new child
   - Disadvantage: for fast indexing and table building, each person should know the project ID. This is not stored in this approach and hence an additional field would be required.
   - This approach was used in very early versions of PASTA until the 2nd disadvantage was identified.
-#### Implementation details
+##### Implementation details
 - "path", "child-number" and "stack of id-numbers" (parental hierarchy) form a branch
 - a measurement, sample, procedure can have multiple branches
   as the scientist can use a measurement in different projects.
 - Projects/tasks/subtasks only have one branch as they are only existant in a project.
 
-### What data is stored:
+#### What data is stored:
 Different types of data (different document types) are stored in the database:
 - text items: projects, tasks, subtasks
 - data: samples, procedures
@@ -47,7 +47,7 @@ Other things don't need to be stored:
 
 
 
-## Database design technical details:
+### Database design technical details:
 All documents have the following properties
 - type is a list of hierarchical types:
   - examples for most data: ["measurement", "Zeiss tif image"], ["measurement", "Indentation", "Pop-in study"]
@@ -60,7 +60,7 @@ All documents have the following properties
 - List of branches: each branch has a path (link to the file on disk, remote url), its hierarchy-stack and the number of this child
 - all data should be saved in SI units or specified
 
-### Examples
+#### Examples
 Essential items have a preceding '-'
 Samples:
 - {-type:["sample"], -name: "sample1", chemistry: "Cu50Co50", origin: "deposition in oven", size: "3 x 3 mm"}
@@ -78,9 +78,9 @@ Measurements
 - {-type: ["measurement", "Zeiss"], -branch:{path:<link>}, producer: Zeiss, SHASUM: "43aa", comment:"Ugly picture"}
 - {-type: ["measurement", "Zwick"], -branch:{path:<link>}, producer: Zwick, SHASUM: "43aa", comment:"Slip in grips"}
 - {-type: ["measurement"], Youngsmodulus: "300GPa", Hardness "10GPa"}
-- All measurements have an SHASUM of their original state (Git-shasum see [dataLad](DataLad)) to ensure that the data is not changed from its original state. DataLad has an additional mechanism to ensure data integrity.
+- All measurements have an SHASUM of their original state (Git-shasum see [dataLad](dataLad.md)) to ensure that the data is not changed from its original state. DataLad has an additional mechanism to ensure data integrity.
 
-### Views
+#### Views
 Views are tables that are created automatically and are rather fast. The following items should be in each table/view.
 - ProjectID should be the key in each view to allow for easy filtering
 - all project headers form a view for the project overview

@@ -1,14 +1,14 @@
 ## PASTA ELN
 ### Table of contents
 - Installation instructions
-  - [Linux/Ubuntu](installLinux)
-  - [Windows](installWindows)
-  - [Apple's macOS](installMacOS)
-- Troubleshooting: [What if errors occur?](troubleshooting)
+  - [Linux/Ubuntu](installLinux.md)
+  - [Windows](installWindows.md)
+  - [Apple's macOS](installMacOS.md)
+- Troubleshooting: [What if errors occur?](troubleshooting.md)
 - Suggestions for:
-  - [new users](firstUsage)
-  - [advanced users](notesUser)
-  - [developes](notesDevelopers)
+  - [new users](firstUsage.md)
+  - [advanced users](notesUser.md)
+  - [developes](notesDevelopers.md)
 
 * * *
 
@@ -21,7 +21,7 @@ In PASTA, the meta-data is stored in a document database called **CouchDB**. Thi
 
 Adaptive software development (scrum) has revolutionized software projects. We believe that **agile project planning** is also highly beneficial for scientific research projects. [To read more... (for all useres)](agileProjects.md)
 
-The raw data is the origin of scientific work and has to follow the FAIR principles to be trusted. PASTA uses **DataLad** for the raw data and simplifies it to the typical use of experimental material scientists. [To read more on the use of dataLad...(for developers)](DataLad.md)
+The raw data is the origin of scientific work and has to follow the FAIR principles to be trusted. PASTA uses **DataLad** for the raw data and simplifies it to the typical use of experimental material scientists. [To read more on the use of dataLad...(for developers)](dataLad.md)
 
 If CouchDB and DataLad are the two legs on which PASTA is built (and agile project planning is its heart), then the **python backend** is its torso, which links everything together. [Read more on the backend...](software.md)
 
