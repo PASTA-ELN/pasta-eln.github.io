@@ -2,6 +2,7 @@ automatically created MD file of error codes by miscTools:errorCodesp
 # database.py
   - dit01: Something unexpected has happend+traceback.format_exc(
     Likely userName / password not correct
+ : database.py:saveDoc could not save, likely JSON issue'
  : could not update document. Likely version conflict. Initial and current version:'
   - dgv01: Database / Network problem for path |',thePath
   - dsv01: something unexpected has happend. Log-file has traceback'
@@ -15,7 +16,7 @@ automatically created MD file of error codes by miscTools:errorCodesp
   - dch06: branch path is None '+doc['_id']
   - dch07: branch not in parent with id '+parentID
   - dch08: parent does not have corresponding path '+doc['_id']+'| parentID '+parentID
-  - dch17: name not in '+doc['_id']
+  - dch17: -name not in '+doc['_id']
   - dch09: qrCode not in sample '+doc['_id']
   - dch10: shasum not in measurement '+doc['_id']
   - dch11: image not in measurement '+doc['_id']
@@ -33,6 +34,7 @@ automatically created MD file of error codes by miscTools:errorCodesp
   - bch01: Could not change into hierarchy. id|'+docID+'  directory:'+dirName+'  cwd:'+self.cwd
   - bbu02: document not in zip file |",doc['_id']
   - bbu03: revision not in zip file |",attachmentName
+  json dumping', item, doc[item]
   - brp01: You tried to replicate although, remote is not defined"
   - bse01: doc path was not found and parent path was not found |"+doc
   - bgc01: No hierarchy tree'
@@ -48,6 +50,9 @@ automatically created MD file of error codes by miscTools:errorCodesp
   - pma08: command in pastaELN.py does not exist |",args.command
   - pma09: undefined'
   - pma10: exception thrown during pastaELN.py"+traceback.format_exc(+"\n"
+
+# testExtractor.py
+ , UNKNOWN IMAGE TYPE RETURNED", type(content['image']
 
 # miscTools.py
   - mpq01: Printing error'
