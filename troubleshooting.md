@@ -10,12 +10,14 @@ Table of contents
 ### Problems during installation
 #### Rerun installation script
 - Rerun the script will solve issues related to a temporary internet stoppage
+
 #### General procedure if rerun does not work
 - check if PASTA-source directory exists with content and has a Python folder in it
 - change into that Python folder
 - "pip install -r requirements.txt" with a preceding sudo on Linux
 - "pastaELN.py test"
 - "python Tests/verifyInstallation.py"
+
 #### Last resort
 - copy the entire output/input in the terminal/command window
 - remove password and username (both somewhat in the middle)
@@ -44,7 +46,6 @@ PASTA has some build-in self-tests and self-repair functionality. It is not auto
 - Click "HEALTH" check. If that does not help, and if those suggestions do to solve the issue...
 
 ##### How can I get more information?
-
 - use "Ctrl-Shift-I" on the keyboard (or use the "Alt"-Button to open the Menu and then View->Toggle Developer Tools)
 - go to the "Console" tab
 - copy-paste everything in there (there should not be any passwords) and send that information to the developer by email
