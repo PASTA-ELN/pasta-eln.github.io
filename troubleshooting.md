@@ -43,8 +43,8 @@ PASTA has some build-in self-tests and self-repair functionality. It is not auto
 - Go to config-page: three horizontal bars on top-left corner
 - Click "HEALTH" check. If that does not help, and if those suggestions do to solve the issue...
 
-##### [How can I get more information and send that information to the developers](#heading-to-achor)
-[anchor](#heading-to-achor)
+##### [How can I get more information?]
+
 - use "Ctrl-Shift-I" on the keyboard (or use the "Alt"-Button to open the Menu and then View->Toggle Developer Tools)
 - go to the "Console" tab
 - copy-paste everything in there (there should not be any passwords) and send that information to the developer by email
