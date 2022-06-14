@@ -2,6 +2,7 @@
 Table of contents
 - [Problems during installation](#problems-during-installation)
 - [Problems after installation](#problems-after-installation)
+
 <br />
 - - -
 <br />
@@ -19,6 +20,7 @@ Table of contents
 - copy the entire output/input in the terminal/command window
 - remove password and username (both somewhat in the middle)
 - email this information to developer
+
 <br />
 - - -
 <br />
@@ -41,24 +43,26 @@ PASTA has some build-in self-tests and self-repair functionality. It is not auto
 - Go to config-page: three horizontal bars on top-left corner
 - Click "HEALTH" check. If that does not help, and if those suggestions do to solve the issue...
 
-##### How can I get more information and send that information to the developers
+##### [How can I get more information and send that information to the developers](#heading-to-achor)
+[anchor](#heading-to-achor)
 - use "Ctrl-Shift-I" on the keyboard (or use the "Alt"-Button to open the Menu and then View->Toggle Developer Tools)
 - go to the "Console" tab
 - copy-paste everything in there (there should not be any passwords) and send that information to the developer by email
+
 <br />
-* * *
+- - -
 <br />
 
 ### Problems with backend / Advanced troubleshooting
 #### Basic tests if something is not working in shell
 You can run some basic tests to see if the installation is working by using a shell and executing:
-- "pastaDB.py test"
-- "pastaDB.py checkDB"
+- "pastaELN.py test"
+- "pastaELN.py checkDB"
 
 ##### If "pastaDB.py test" fails with an authorization error
 1. use a webbrowser and go to http://127.0.0.1:5984/_utils
   - test if you remember the username and password
-2. .pasta.json in home folder (Windows c:/user/**yourName**) with an editor
+2. .pastaELN.json in home folder (Windows c:/user/**yourName**) with an editor
   - edit entries after "user" and "password"
   - "-userID" does not matter.
   - Entries under "remote" do not matter, either.
@@ -74,8 +78,9 @@ Log into couchDB server at least once, (2) run test, (3) setup as "single node"
 #### Problems with configurations (softwareDir does not exist, ...)
 - Run in the shell the command "pastaDB.py checkConfiguration" to test it
 - To repair configuration "pastaDB.py checkConfigurationDev"
+
 <br />
-* * *
+- - -
 <br />
 
 ### General issues
