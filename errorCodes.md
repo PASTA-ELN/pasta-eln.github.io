@@ -32,7 +32,6 @@ automatically created MD file of error codes by miscTools:errorCodesp
   - bad01: fetch remote content failed. Data not added'
   - bad02: Tried to create new datalad folder which did already exist'
   - bch01: Could not change into hierarchy. id|'+docID+'  directory:'+dirName+'  cwd:'+self.cwd
- : cannot compare .eln files'
   - bbu02: document not in zip file |",doc['_id']
   - bbu03: revision not in zip file |",attachmentName
   json dumping', item, doc[item]
