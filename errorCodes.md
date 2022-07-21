@@ -1,10 +1,18 @@
 automatically created MD file of error codes by miscTools:errorCodesp
+# inputOutput.py
+  in part",part
+  multiple nodes with same id'
+  cannot read this thumbnail"
+  undefined ELN-Name', elnName
+  undefined ELN-Name', elnName
+ : ro-crate does not exist in folder. EXIT'
+
 # database.py
   - dit01: Something unexpected has happend+traceback.format_exc(
     Likely userName / password not correct
  : database.py:saveDoc could not save, likely JSON issue'
  : could not update document. Likely version conflict. Initial and current version:'
-  - dgv01: Database / Network problem for path |',thePath
+  - dgv01: Database / Network problem for path |',thePath[1]
   - dsv01: something unexpected has happend. Log-file has traceback'
   - drp01: Could not connect to remote server. Abort replication.'
   - drp02: replicate error |\n",traceback.format_exc(
@@ -28,15 +36,14 @@ automatically created MD file of error codes by miscTools:errorCodesp
 
 # backend.py
   Configuration version does not fit'
-  - bin01: Base folder did not exist |'+self.basePath
   - bad01: fetch remote content failed. Data not added'
   - bad02: Tried to create new datalad folder which did already exist'
-  - bch01: Could not change into hierarchy. id|'+docID+'  directory:'+dirName+'  cwd:'+self.cwd
+ : cannot compare/restore .eln files'
   - bbu02: document not in zip file |",doc['_id']
   - bbu03: revision not in zip file |",attachmentName
   json dumping', item, doc[item]
   - brp01: You tried to replicate although, remote is not defined"
-  - bse01: doc path was not found and parent path was not found |"+doc
+  - bse01: doc path was not found and parent path was not found |"+str(doc
   - bgc01: No hierarchy tree'
 
 # pastaELN.py
@@ -47,9 +54,8 @@ automatically created MD file of error codes by miscTools:errorCodesp
   - pma03: syncRL not implemented yet'
   - pma06: error after redo-extraction'
   - pma07: something strange occurs with content string'
-  - pma08: command in pastaELN.py does not exist |",args.command
-  - pma09: undefined'
   - pma10: exception thrown during pastaELN.py"+traceback.format_exc(+"\n"
+  - pma08: command in pastaELN.py does not exist |',args.command
 
 # testExtractor.py
  , UNKNOWN IMAGE TYPE RETURNED", type(content['image']
