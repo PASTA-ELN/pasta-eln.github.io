@@ -55,7 +55,7 @@ automatically created MD file of error codes by miscTools:errorCodesp
   - pma06: error after redo-extraction'
   - pma07: something strange occurs with content string'
   - pma10: exception thrown during pastaELN.py"+traceback.format_exc(+"\n"
-  - pma08: command in pastaELN.py does not exist |',args.command
+  - pma08: command in pastaELN.py does not exist |',arguments.command
 
 # testExtractor.py
  , UNKNOWN IMAGE TYPE RETURNED", type(content['image']
