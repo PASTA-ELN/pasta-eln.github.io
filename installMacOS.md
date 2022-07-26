@@ -50,14 +50,16 @@ While setting up, set administrator user-name and password.
     ```
 
 ### install PASTA and all dependencies
-1. clone this [repository](https://jugit.fz-juelich.de/pasta/main.git)
+1. clone this [repository](https://github.com/PASTA-ELN/desktop)
 2. open a Linux shell
-3. cd into the repository folder on your system#
-4. install requirements
+3. cd into the main folder on your system
+4. clone this [PythonRepository](https://github.com/PASTA-ELN/Python) as Python into the main folder
+5. cd into Python folder
+6. install requirements
     ```bash
     sudo pip install -r requirements.txt
     ```
-5. copy ".pasta.json" into home-directory and add your account details
+7. copy ".pasta.json" into home-directory and add your account details
 ```
 change *user* and *Password* in .pasta.json in your home directory to your CouchDB
 username and password
@@ -67,17 +69,6 @@ username and password
 Start using PASTA by "./pastaCLI.py". See [firstUsage](firstUsage)
 
 ## Unit-test in python
-### Install dependencies for some of the tested data
-use git to install:
-https://jugit.fz-juelich.de/s.brinckmann/experimental-micromechanics
-
-### Ensure that the path to experimental-micromechanics is in your python path
-open python
-```python
-from Tif import Tif
-from nanoIndent import Indentation
-```
-
 ### Run unit test in PASTA's python folder
 - run "python3 -m unittest discover -s Tests" in main folder to test installation
 
